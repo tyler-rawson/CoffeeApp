@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Just Java</string>
+    <string name="editTextNameForOrder">Enter name for the order.</string>
     <string name="textViewQuantity">Quantity</string>
-    <string name="textViewPrice">Price</string>
+    <string name="textViewPrice">Order Summary</string>
     <string name="textViewOrder">Order</string>
+    <string name="textViewOrderSummaryDetails">Place an order to see the price.</string>
+    <string name="textViewToppings">Toppings</string>
+    <string name="textViewQuantityNumber">0</string>
     <string name="buttonMinus">-</string>
     <string name="buttonPlus">+</string>
-    <string name="textViewTotal">Place an order to see the price.</string>
-    <string name="textViewQuantityNumber">0</string>
+    <string name="checkBoxChocolate">Chocolate</string>
+    <string name="checkBoxWhippedCream">Whipped Cream</string>
+    <string name="checkBoxCinnamon">Cinnamon</string>
 </resources>

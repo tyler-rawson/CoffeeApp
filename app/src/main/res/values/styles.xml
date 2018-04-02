@@ -8,4 +8,84 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="textViewStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#880E4F</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:shadowColor">@color/colorAccent</item>
+        <item name="android:textColor">#880E4F</item>
+    </style>
+
+    <style name="orderButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">#880E4F</item>
+
+    </style>
+
+    <style name="incrementDecrementButtonStyle" parent="Base.Widget.AppCompat.Button">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">#880E4F</item>
+    </style>
+
+    <style name="textViewOrderSummary" parent="textViewStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textColor">#880E4F</item>
+    </style>
+
+    <style name="textViewOrderSummaryDetails" parent="textViewStyle">
+        <item name="android:layout_alignLeft">@+id/textViewOrderSummary</item>
+        <item name="android:layout_alignStart">@id/textViewOrderSummary</item>
+        <item name="android:layout_below">@+id/textViewOrderSummary</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">start</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="textViewToppingsQuantityHeader" parent="textViewStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">#880E4F</item>
+    </style>
+
+    <style name="textViewQuantityPicker" parent="textViewStyle">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:textColor">#880E4F</item>
+        <item name="android:textColorHint">#880E4F</item>
+    </style>
+
 </resources>
