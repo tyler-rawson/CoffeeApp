@@ -1,4 +1,5 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java</string>
     <string name="editTextNameForOrder">Enter name for the order.</string>
     <string name="textViewQuantity">Quantity</string>
@@ -6,10 +7,16 @@
     <string name="textViewOrder">Order</string>
     <string name="textViewOrderSummaryDetails">Place an order to see the price.</string>
     <string name="textViewToppings">Toppings</string>
-    <string name="textViewQuantityNumber">0</string>
-    <string name="buttonMinus">-</string>
-    <string name="buttonPlus">+</string>
-    <string name="checkBoxChocolate">Chocolate</string>
-    <string name="checkBoxWhippedCream">Whipped Cream</string>
-    <string name="checkBoxCinnamon">Cinnamon</string>
+    <string name="textViewQuantityNumber" translatable="false">0</string>
+    <string name="buttonMinus" translatable="false">-</string>
+    <string name="buttonPlus" translatable="false">+</string>
+
+    <string name="name">Name: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="base_price">Base Price</string>
+    <string name="cinnamon">Cinnamon</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="total_in_usd">Total: $</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="emailSubjectLine">JustJava order for</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="priceOfCoffee">3.00</string>
-    <string name="priceOfChocolate">1.50</string>
-    <string name="priceOfCinnamon">1.00</string>
-    <string name="priceOfWhippedCream">0.5</string>
+    <string name="priceOfCoffee" translatable="false">3.00</string>
+    <string name="priceOfChocolate" translatable="false">1.50</string>
+    <string name="priceOfCinnamon" translatable="false">1.00</string>
+    <string name="priceOfWhippedCream" translatable="false">0.50</string>
 </resources>

@@ -49,19 +49,19 @@
                     <CheckBox
                         android:id="@+id/checkBoxChocolate"
                         style="@style/checkBoxStyle"
-                        android:text="@string/checkBoxChocolate" />
+                        android:text="@string/chocolate" />
 
                     <CheckBox
                         android:id="@+id/checkBoxCinnamon"
                         style="@style/checkBoxStyle"
                         android:layout_below="@id/checkBoxChocolate"
-                        android:text="@string/checkBoxCinnamon" />
+                        android:text="@string/cinnamon" />
 
                     <CheckBox
                         android:id="@+id/checkBoxWhippedCream"
                         style="@style/checkBoxStyle"
                         android:layout_below="@id/checkBoxCinnamon"
-                        android:text="@string/checkBoxWhippedCream" />
+                        android:text="@string/whipped_cream" />
                 </RelativeLayout>
 
                 <TextView
@@ -95,21 +95,6 @@
                         android:text="@string/buttonPlus" />
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/textViewOrderSummary"
-                        style="@style/textViewOrderSummary"
-                        android:text="@string/textViewPrice" />
-
-                    <TextView
-                        android:id="@+id/textViewOrderSummaryDetails"
-                        style="@style/textViewOrderSummaryDetails"
-                        android:text="@string/textViewOrderSummaryDetails" />
-
-                </RelativeLayout>
 
                 <Button
                     android:id="@+id/button"

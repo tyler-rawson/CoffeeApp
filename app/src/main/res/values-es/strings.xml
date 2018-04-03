@@ -1,0 +1,17 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Just Java</string>
+    <string name="base_price">Precio base</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="cinnamon">Canela</string>
+    <string name="editTextNameForOrder">"Ingrese el nombre para la orden."</string>
+    <string name="textViewOrder">Orden</string>
+    <string name="textViewOrderSummaryDetails">Haga un pedido para ver el precio.</string>
+    <string name="textViewPrice">Resumen del pedido</string>
+    <string name="textViewQuantity">Cantidad</string>
+    <string name="textViewToppings">Ingredientes</string>
+    <string name="thank_you">"¡Gracias!"</string>
+    <string name="total_in_usd">Coste total: $</string>
+    <string name="whipped_cream">"Crema batida"</string>
+    <string name="name">Nombre: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="emailSubjectLine">JustJava orden para</string>
+</resources>

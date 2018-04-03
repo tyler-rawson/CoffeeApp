@@ -1,14 +1,8 @@
-/**
- * IMPORTANT: Make sure you are using the correct package name.
- * This example uses the package name:
- * package com.example.android.justjava
- * If you get an error when copying this code into Android studio, update it to match teh package name found
- * in the project's AndroidManifest.xml file.
- **/
-
 package com.example.android.justjava;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -26,8 +20,6 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
     public int quantity = 0;
     public TextView textViewQuantity;
-    public TextView textViewOrderSummaryDetails;
-    public TextView textViewOrderSummary;
     public Button buttonDecrement;
     public CheckBox checkBoxWhippedCream;
     public CheckBox checkBoxChocolate;
@@ -41,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         editTextName = (EditText) findViewById(R.id.editTextName);
         textViewQuantity = (TextView) findViewById(R.id.quantity_text_view);
-        textViewOrderSummary = (TextView) findViewById(R.id.textViewOrderSummary);
-        textViewOrderSummaryDetails = (TextView) findViewById(R.id.textViewOrderSummaryDetails);
         buttonDecrement = (Button) findViewById(R.id.decrementButton);
         checkBoxWhippedCream = (CheckBox) findViewById(R.id.checkBoxWhippedCream);
         checkBoxChocolate = (CheckBox) findViewById(R.id.checkBoxChocolate);
@@ -90,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         if (quantity == 0) {
-            textViewOrderSummary.setVisibility(View.GONE);
-            textViewOrderSummaryDetails.setVisibility(View.GONE);
             Toast.makeText(getApplicationContext(), R.string.textViewOrderSummaryDetails,
                     Toast.LENGTH_SHORT).show();
         } else if (quantity > 0) {
@@ -101,10 +89,9 @@ public class MainActivity extends AppCompatActivity {
             boolean chocolate = checkBoxChocolate.isChecked(); // is the chocolate checkbox checked?
             boolean cinnamon = checkBoxCinnamon.isChecked(); //is the cinnamon checkbox checked?
 
-            displayMessage(createOrderSummary(price, whippedCream, chocolate, cinnamon)); //creates a receipt and displays to the user
+            String orderSummary = createOrderSummary(price, whippedCream, chocolate, cinnamon); //creates a receipt and displays to the user
 
-            textViewOrderSummary.setVisibility(View.VISIBLE);
-            textViewOrderSummaryDetails.setVisibility(View.VISIBLE);
+            composeEmail(getString(R.string.emailSubjectLine) + " " + editTextName.getText(), orderSummary);
         }
 
     }
@@ -134,30 +121,30 @@ public class MainActivity extends AppCompatActivity {
         if (addChocolate) {
             priceForChocolate = convertDoubleToTwoDecimalPlaces(priceForChocolate);
             price += priceForChocolate;
-            inclChocolateOnReceipt = "\n+$" + priceForChocolate + " Chocolate";
+            inclChocolateOnReceipt = "\n   +$" + priceForChocolate + " " + getString(R.string.chocolate);
         }
 
         if (addCinnamon) {
             priceForCinnamon = convertDoubleToTwoDecimalPlaces(priceForCinnamon);
             price += priceForCinnamon;
-            inclCinnamonOnReceipt = "\n+$" + priceForCinnamon + " Cinnamon";
+            inclCinnamonOnReceipt = "\n   +$" + priceForCinnamon + " " + getString(R.string.cinnamon);
         }
 
         if (addWhippedCream) {
             priceForWhippedCream = convertDoubleToTwoDecimalPlaces(priceForWhippedCream);
             price += priceForWhippedCream;
-            inclWhippedCreamOnReceipt = "\n+$" + priceForWhippedCream + " W/Cream";
+            inclWhippedCreamOnReceipt = "\n   +$" + priceForWhippedCream + " " + getString(R.string.whipped_cream);
         }
 
-        String priceMessage = "Name: " + nameForOrder +
+        String priceMessage = getString(R.string.name, nameForOrder) +
                 "\n" +
-                "$" + basePrice + " Base Price" +
+                "$" + basePrice + " " + getString(R.string.base_price) +
                 inclChocolateOnReceipt +
                 inclCinnamonOnReceipt +
                 inclWhippedCreamOnReceipt +
                 "\n" +
-                "\nTotal: $" + String.format("%.2f", convertDoubleToTwoDecimalPlaces(price)) + //format to incl trailing zero. For example, "Total 27.4" vs "27.40".
-                "\nThank You!";
+                "\n" + getString(R.string.total_in_usd) + String.format("%.2f", convertDoubleToTwoDecimalPlaces(price)) + //format to incl trailing zero. For example, "Total 27.4" vs "27.40".
+                "\n" + getString(R.string.thank_you);
         return priceMessage;
     }
 
@@ -178,9 +165,6 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param message the text to be printed .
      */
-    public void displayMessage(String message) {
-        textViewOrderSummaryDetails.setText(message);
-    }
 
     /**
      * Calculates the cost of multiple coffees or toppings.
@@ -229,5 +213,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void composeEmail(String subjectOfEmail, String bodyOfEmail) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, subjectOfEmail);
+        intent.putExtra(Intent.EXTRA_TEXT, bodyOfEmail);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 
 }
