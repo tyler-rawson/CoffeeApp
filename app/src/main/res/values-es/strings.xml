@@ -1,17 +1,20 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java</string>
-    <string name="base_price">Precio base</string>
-    <string name="chocolate">Chocolate</string>
-    <string name="cinnamon">Canela</string>
     <string name="editTextNameForOrder">"Ingrese el nombre para la orden."</string>
+    <string name="textViewQuantity">Cantidad</string>
+    <string name="textViewPrice">Resumen del pedido</string>
     <string name="textViewOrder">Orden</string>
     <string name="textViewOrderSummaryDetails">Haga un pedido para ver el precio.</string>
-    <string name="textViewPrice">Resumen del pedido</string>
-    <string name="textViewQuantity">Cantidad</string>
     <string name="textViewToppings">Ingredientes</string>
-    <string name="thank_you">"¡Gracias!"</string>
-    <string name="total_in_usd">Coste total: $</string>
-    <string name="whipped_cream">"Crema batida"</string>
-    <string name="name">Nombre: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+
+    <string name="strName">Nombre: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="strBase_price">Precio base</string>
+    <string name="strCinnamon">Canela</string>
+    <string name="strChocolate">Chocolate</string>
+    <string name="strWhipped_cream">"Crema batida"</string>
+    <string name="strTotal">Coste total: $</string>
+    <string name="strThank_you">"¡Gracias!"</string>
     <string name="emailSubjectLine">JustJava orden para</string>
+    <string name="cannotExceed100Message">No puede pedir más de 100 en este momento.</string>
+    <string name="strEach">cada</string>
 </resources>

@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -13,7 +12,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">#880E4F</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">16sp</item>
     </style>
 
@@ -22,7 +21,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
         <item name="android:shadowColor">@color/colorAccent</item>
-        <item name="android:textColor">#880E4F</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="orderButtonStyle">
@@ -30,14 +29,13 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textColor">#880E4F</item>
-
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="incrementDecrementButtonStyle" parent="Base.Widget.AppCompat.Button">
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">48dp</item>
-        <item name="android:textColor">#880E4F</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="textViewToppingsQuantityHeader" parent="textViewStyle">
@@ -48,7 +46,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textColor">#880E4F</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>
 
     <style name="textViewQuantityPicker" parent="textViewStyle">
@@ -64,8 +62,15 @@
         <item name="android:gravity">center</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:inputType">textCapWords</item>
-        <item name="android:textColor">#880E4F</item>
-        <item name="android:textColorHint">#880E4F</item>
+        <item name="android:textColor">@color/colorSecondaryDark</item>
+        <item name="android:shadowColor">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorSecondaryDark</item>
+    </style>
+
+    <style name="AppTheme.EditText">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorSecondaryLight</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
     </style>
 
 </resources>

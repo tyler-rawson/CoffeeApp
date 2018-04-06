@@ -11,12 +11,14 @@
     <string name="buttonMinus" translatable="false">-</string>
     <string name="buttonPlus" translatable="false">+</string>
 
-    <string name="name">Name: <xliff:g example="Amy" id="name">%s</xliff:g></string>
-    <string name="base_price">Base Price</string>
-    <string name="cinnamon">Cinnamon</string>
-    <string name="chocolate">Chocolate</string>
-    <string name="whipped_cream">Whipped Cream</string>
-    <string name="total_in_usd">Total: $</string>
-    <string name="thank_you">Thank You!</string>
+    <string name="strName">Name: <xliff:g example="Amy" id="name">%s</xliff:g></string>
+    <string name="strBase_price">Base Price</string>
+    <string name="strCinnamon">Cinnamon</string>
+    <string name="strChocolate">Chocolate</string>
+    <string name="strWhipped_cream">Whipped Cream</string>
+    <string name="strTotal">Total: $</string>
+    <string name="strThank_you">Thank You!</string>
     <string name="emailSubjectLine">JustJava order for</string>
+    <string name="cannotExceed100Message">You cannot order greater than 100 at this time.</string>
+    <string name="strEach">each</string>
 </resources>
